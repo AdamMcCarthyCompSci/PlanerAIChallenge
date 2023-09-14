@@ -4,7 +4,8 @@ from django.http import HttpResponse, QueryDict
 
 
 def forecasts(request):
-    api_key = "AIzaSyCBxYsF3U9vRyjD8q1ttxxLfENml_wszAA"
+    # Place API key here
+    api_key = None
     city_name = request.GET.get('city', 'berlin')
     geocoding_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={city_name}&key={api_key}"
     geocoding_response = requests.get(geocoding_url)
